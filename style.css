@@ -1,0 +1,221 @@
+@import url("https://fonts.googleapis.com/css?family=Hind+Madurai:300,600&display=swap");
+* {
+  font-family: "Hind Madurai", sans-serif;
+}
+body,html {
+  min-width: 390px;
+  margin:0;
+  padding:0;
+}
+main {
+  max-width: 1500px;
+  background-color: whitesmoke;
+  margin: auto;
+}
+
+#cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.card {
+  margin: 20px;
+}
+#cards .card {
+  width: 285px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid rgba(192, 192, 192, 0.445);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.096);
+  cursor: pointer;
+  transition: all 0.3s;
+  position: relative;
+}
+.card .title{
+  color:black;
+  font-weight: lighter;
+}
+#cards .card:hover {
+  box-shadow: 0 20px 15px rgba(0, 0, 0, 0.24);
+  transform: translateY(-5px);
+}
+
+.card .img {
+  text-align: center;
+  padding: 30px 0;
+  width:100%;
+  margin: auto;
+}
+.by{
+  color:#FB6542;
+  text-align: center;
+  padding:20px 0;
+  font-weight: bold;
+}
+.top {
+  display: flex;
+  justify-content: space-between;
+}
+.top img {
+  height: 100%;
+  height: 30px;
+  margin: auto 0;
+}
+.img img {
+  width: 100%;
+}
+
+.time {
+  text-align: center;
+  font-weight: bold;
+  background-color: rgb(233, 233, 233);
+  font-family: sans-serif;
+  padding: 10px;
+  border-radius: 3px;
+}
+.time_hidden{
+  display:none;
+}
+.card_footer,
+.description {
+  font-family: sans-serif;
+  text-align: center;
+  padding: 10px 0;
+  margin-top: 10px;
+  color: rgb(46, 48, 48);
+  font-size: 15px;
+  font-weight: bold;
+}
+a {
+  text-decoration: none;
+}
+.date {
+  position: relative;
+  width:  180px;
+  height: 20px;
+  margin:50px auto;
+}
+#min,
+#max {
+  width: 20px;
+  height: 20px;
+  background-color: rgb(248, 69, 37);
+  border-radius: 50%;
+  position: absolute;
+  right: -20px;
+  top: 0;
+  bottom: 0;
+  z-index: 2;
+  cursor: pointer;
+}
+#min {
+  left: -20px;
+}
+.date #range {
+  z-index: 1;
+  height: 2px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 100%;
+  background-color: rgb(224, 224, 224);
+}
+
+#current_min_date {
+  position: absolute;
+  left: -20px;
+  top: 25px;
+}
+
+#current_max_date {
+  position: absolute;
+  right: -20px;
+  top: 25px;
+}
+.search {
+  background-color: white;
+  border:1px solid rgb(226, 226, 226);
+  display: flex;
+  padding: 10px;
+  max-width: 500px;
+  border-radius: 2px;
+  transition: all .3s;
+  margin:auto;
+}
+.search input {
+  border-radius: 2px;
+  border: 0;
+  transition: all 0.2s;
+  width: 100%;
+}
+.search input:focus {
+  outline: 0;
+}
+.search img {
+  width: 30px;
+  margin-right: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#pagination_controls {
+  position: relative;
+  padding: 0 30px;
+  max-width: 500px;
+  margin: auto;
+}
+
+.chev {
+  position: absolute;
+  width: 45px;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  padding: 15px 5px;
+  margin: auto;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+.chev:hover {
+  background-color: rgb(212, 208, 208);
+}
+#chevR {
+  right: 0;
+  left: unset;
+}
+.pagination_buttons {
+  max-width: 300px;
+  box-sizing: border-box;
+  display: flex;
+  color: white;
+  border: 1px solid rgba(156, 156, 156, 0.233);
+  border-right: 0;
+  border-left: 0;
+  padding: 5px 0;
+  margin: 30px auto;
+  overflow: hidden;
+  
+}
+.pagination_buttons .page_button {
+  margin: 10px 0;
+  padding: 10px 20px;
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: 11%;
+  border: 1px solid rgba(117, 117, 117, 0.37);
+  cursor: pointer;
+  background-color: rgb(255, 255, 255);
+  color: black;
+  transition: all 0.2s;
+  text-align: center;
+}
+
+.page_button:hover {
+  background-color: rgb(209, 209, 209);
+}
+
+.pagination_buttons .active_page {
+  background-color: rgb(209, 209, 209);
+}
