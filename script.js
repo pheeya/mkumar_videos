@@ -412,7 +412,7 @@ function pop(element) {
 
 //CONSTANTS
 
-const MAX_PER_PAGE = 4;
+const MAX_PER_PAGE = 8;
 // Variables
 
 var current_page = 1;
