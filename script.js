@@ -1,3 +1,4 @@
+
 var url = "Videos(1k).xlsx";
 var json_sheet;
 /* set up async GET request */
@@ -388,13 +389,17 @@ document.getElementById("close").onclick = function () {
   popup.style.visibility = "hidden";
   popup_inner.style.transform = "scale(0)"
   popup_inner.style.opacity = "0"
+  document.getElementById("view360Iframe").src=""
 }
+
 function pop(element) {
   popup.style.visibility = "visible"
   popup_inner.style.transform = "scale(1)"
   popup_inner.style.opacity = "1"
-  //https://www.youtube.com/embed/
-  document.getElementById("view360Iframe").src="https://www.youtube.com/embed/" + element.dataset["VideoId"]
+  var player;
+
+ 
+  document.getElementById("view360Iframe").src="https://www.youtube.com/embed/" + element.dataset["VideoId"];
   document.getElementById("popup_title").innerHTML = element.dataset.modelTitle;
   document.getElementById("popup_description").innerHTML = element.dataset['description']
   document.getElementById("property_posted_by").innerHTML = element.dataset.postedBy;
