@@ -66,6 +66,8 @@ req.onload = function (e) {
   card.dataset.vrExperience =s["VR Experience"]
   card.dataset.learn =s["Learn"]
   card.dataset.language =s["Language"]
+  card.dataset.description=s['Description']
+  card.dataset.link = s['Link'];
     document.getElementById("cards").appendChild(card); //apend to cards flexbox
     card.addEventListener("click", function () {
       pop(this)
@@ -402,6 +404,7 @@ function pop(element) {
   document.getElementById("view360Iframe").src="https://www.youtube.com/embed/" + element.dataset["VideoId"];
   document.getElementById("popup_title").innerHTML = element.dataset.modelTitle;
   document.getElementById("popup_description").innerHTML = element.dataset['description']
+  document.getElementById("popup_link").href = element.dataset['link']
   document.getElementById("property_posted_by").innerHTML = element.dataset.postedBy;
   document.getElementById("property_country").innerHTML = element.dataset['country']
   document.getElementById("property_location").innerHTML = element.dataset['location']
